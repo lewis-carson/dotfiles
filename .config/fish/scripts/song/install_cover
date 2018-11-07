@@ -1,0 +1,15 @@
+cd ~/.temp
+
+back="$(cat ~/.bg | tail -n 1)"
+#cp $back ~/.temp/bg
+
+convert -size 1280x800 xc:$back ~/.temp/bg.png
+
+bash ~/.config/fish/scripts/song/get_album
+
+convert cover.png -bordercolor $back -border 5 cover.png
+
+convert cover.png -bordercolor "$(bash ~/.config/fish/scripts/song/main)" -border 3 cover.png
+
+convert -composite -gravity center ~/.temp/bg.png ~/.temp/cover.png ~/.temp/fin.png
+feh --bg-fill ~/.temp/fin.png

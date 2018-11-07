@@ -1,0 +1,17 @@
+#define BLK #000000
+#define RED #ff4500
+#define GRN #ff7f50
+#define YEL #ffa500
+#define BLU #cd853f
+#define MAG #8b0000
+#define CYN #ff6347
+#define WHT #ffffe0
+
+#define BBLK BLK
+#define BRED RED
+#define BGRN GRN
+#define BYEL YEL
+#define BBLU BLU
+#define BMAG MAG
+#define BCYN CYN
+#define BWHT WHT

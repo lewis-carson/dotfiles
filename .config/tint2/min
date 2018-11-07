@@ -1,0 +1,19 @@
+rounded = 0
+border_width = 0
+background_color = #ffffff 100
+
+panel_items = C
+panel_size = 55px 55px
+panel_margin = 20 20
+panel_padding = 10 10
+panel_background_id = 1
+panel_position = top right horizontal
+
+#-------------------------------------
+# Clock
+time1_format = %H:%M
+time1_timezone = 
+panel_align = center
+time1_font = cherry 7
+clock_font_color = #000000 100
+clock_padding = 0 0
