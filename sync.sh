@@ -4,6 +4,7 @@ cp ~/.config/ranger/ .config/ranger/ -r
 cp ~/.themes/ ./.themes/ -r
 cp ~/.config/fish/ ./.config/fish -r
 cp ~/.bashrc ./
+cp ~/.vimrc ./
 cp ~/.Xresources ./
 cp ~/.xrdb/ ./.xrdb/ -r
 

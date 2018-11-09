@@ -1,10 +1,10 @@
 #include ".theme"
 
-*font: xft:Neep:size=13
+*font: xft:curie:size=13
 
 *boldFont:
 *lineSpace:             10
-*letterSpace:           0
+*letterSpace:           -1
 *geometry:              50x20
 *internalBorder:        5
 *scrollBar:             false

@@ -113,3 +113,5 @@ if ! shopt -oq posix; then
 fi
 
 fish
+
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash

@@ -1,0 +1,1 @@
+/home/mao/.fzf/shell/key-bindings.fish
