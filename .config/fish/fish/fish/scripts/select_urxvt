@@ -1,4 +1,0 @@
-#!/usr/bin/env bash
-
-read w h x y < <(slop -f '%w %h %x %y')
-urxvt -g "$((w/8))x$((h/16))+$x+$y" &
