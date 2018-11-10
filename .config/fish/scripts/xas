@@ -1,3 +1,0 @@
-#!/bin/sh
-pcs() { for i in {0..7}; do echo -en "\e[${1}$((30+$i))m [x]"; done; }
-printf "%s\n%s" "$(pcs)" "$(pcs '1;')"

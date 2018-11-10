@@ -1,3 +1,0 @@
-#!/bin/bash
-
-echo "$(date; ifconfig | grep eth1; uname -a)" | sha1sum | cut --characters 1-40

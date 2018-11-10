@@ -1,8 +1,0 @@
-#!/bin/bash
-
-response=`curl -s "http://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=torvim&api_key=4f48be1eec6e4c0ad5331032c972a29f&format=json"` 
-
-wget -O ~/.temp/cover.png $(echo $response | jq -r '.recenttracks.track[0].image[3]["#text"]')
-
-#feh cover.png
-#rm cover.png
