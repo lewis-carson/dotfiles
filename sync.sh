@@ -1,3 +1,5 @@
+mkdir .config
+mkdir .config/tint2 .config/openbox .config/ranger .config/fish
 cp ~/.config/tint2/* .config/tint2/* -r
 cp ~/.config/openbox/* .config/openbox/* -r
 cp ~/.config/ranger/* .config/ranger/* -r

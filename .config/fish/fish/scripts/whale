@@ -1,0 +1,36 @@
+#!/bin/sh
+#
+# This script is an edit of ufetch
+#
+
+## DEFINE COLORS
+# Don't change
+bc="$(tput bold)"	# bold
+c0="$(tput setaf 0)"	# black
+c1="$(tput setaf 1)"	# red
+c2="$(tput setaf 2)"	# green
+c3="$(tput setaf 3)"	# yellow
+c4="$(tput setaf 4)"	# blue
+c5="$(tput setaf 5)"	# magenta
+c6="$(tput setaf 6)"	# cyan
+c7="$(tput setaf 7)"	# white
+rc="$(tput sgr0)"	# reset
+
+# You can change these
+nc="${rc}${bc}${c1}"	# user and hostname
+ic="${rc}"	        # info
+fc="${rc}${c4}${bc}"	# first color
+sc="${rc}${bc}${c7}"	# second color
+
+## OUTPUT
+cat <<EOF
+
+${fc}     .-'		
+${fc} '--./ /     _.---.	
+${fc} '-,  (__..-'       \	
+${fc}    \          ${sc}.${fc}     |
+${fc}     ',.__.   ,__.--/	
+${sc}       '._${sc}/_.'${sc}___.-'
+${rc}
+
+EOF

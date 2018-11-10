@@ -1,0 +1,4 @@
+#!/bin/bash
+
+convert ~/.temp/cover.png -colors 1 text: | head -n 2 | tail -n 1 | cut -c33-39
+#convert ~/.temp/border.png: -format '%[pixel:p{1,1}]' info:-

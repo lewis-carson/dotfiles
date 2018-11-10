@@ -1,0 +1,17 @@
+#!/bin/bash
+
+response=`curl -s "http://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=torvim&api_key=4f48be1eec6e4c0ad5331032c972a29f&format=json"` 
+artist=`echo "$response" | jq ".[] | .track | .[0] | .artist " | tr -d "\#" | jq ".text" | tr -d '"'`
+track=`echo "$response" | jq ".[] | .track | .[0] | .name" | tr -d '"'`
+album=`echo "$response" | jq ".[] | .track | .[0] | .album " | tr -d "\#" | jq ".text" | tr -d '"'`
+
+song=$(echo "$track")
+
+if ((${#song} > 40))
+then
+	new="$(echo $song | cut -c 1-40)..."
+	echo "$new"
+else
+	new="$(echo $song)"
+	echo "$new"
+fi

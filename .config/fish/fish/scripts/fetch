@@ -1,0 +1,63 @@
+#!/bin/sh
+#
+# ufetch-debian - tiny system info for debian
+
+## INFO
+
+# user is already defined
+host="$(hostname)"
+os='Debian'
+kernel="$(uname -sr)"
+uptime="$(uptime -p | sed 's/up //')"
+packages="$(dpkg -l | wc -l)"
+shell="$(basename ${SHELL})"
+
+if [ -z "${WM}" ]; then
+	if [ "${XDG_CURRENT_DESKTOP}" ]; then
+		envtype='DE:'
+		WM="${XDG_CURRENT_DESKTOP}"
+	elif [ "${DESKTOP_SESSION}" ]; then
+		envtype='DE:'
+		WM="${DESKTOP_SESSION}"
+	elif [ -f "${HOME}/.xinitrc" ]; then
+		envtype='WM:'
+		WM="$(tail -n 1 "${HOME}/.xinitrc" | cut -d ' ' -f 2)"
+	fi
+else
+	envtype='WM:'
+fi
+
+## DEFINE COLORS
+
+# probably don't change these
+if [ -x "$(command -v tput)" ]; then
+	bold="$(tput bold)"
+	black="$(tput setaf 0)"
+	red="$(tput setaf 1)"
+	green="$(tput setaf 2)"
+	yellow="$(tput setaf 3)"
+	blue="$(tput setaf 4)"
+	magenta="$(tput setaf 5)"
+	cyan="$(tput setaf 6)"
+	white="$(tput setaf 7)"
+	reset="$(tput sgr0)"
+fi
+
+# you can change these
+lc="${reset}${bold}${red}"		# labels
+nc="${reset}${bold}${red}"		# user and hostname
+ic="${reset}${bold}${white}"		# info
+c0="${reset}${bold}${red}"		# first color
+c1="${reset}${red}"			# second color
+
+#${lc}KERNEL:    ${ic}${kernel}${reset}
+#${lc}UPTIME:    ${ic}${uptime}${reset}
+
+## OUTPUT
+
+cat <<EOF
+${lc}US:       ${USER}${ic}@${lc}${host}${reset}
+${lc}OS:       ${ic}${os}${reset}
+${lc}PK:       ${ic}${packages}${reset}
+${lc}SH:       ${ic}${shell}${reset}
+EOF

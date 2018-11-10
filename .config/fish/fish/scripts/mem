@@ -1,0 +1,2 @@
+free -m | sed -n 2p | cut -c 29-31
+
