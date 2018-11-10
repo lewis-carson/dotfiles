@@ -1,12 +1,12 @@
 #include ".theme"
 
-*font: xft:curie:size=13
+*font: xft:curie:size=7
 
 *boldFont:
 *lineSpace:             10
-*letterSpace:           -1
+*letterSpace:           1
 *geometry:              50x20
-*internalBorder:        5
+*internalBorder:        30
 *scrollBar:             false
 
 
