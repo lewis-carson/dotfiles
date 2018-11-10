@@ -1,11 +1,10 @@
 mkdir .config
-mkdir .config/tint2 .config/openbox .config/ranger .config/fish
-cp ~/.config/tint2/* .config/tint2/* -r
-cp ~/.config/openbox/* .config/openbox/* -r
-cp ~/.config/ranger/* .config/ranger/* -r
-cp ~/.xrdb/* ./.xrdb/* -r
-cp ~/.themes/* ./.themes/* -r
-cp ~/.config/fish/* ./.config/fish* -r
+cp ~/.config/tint2/ .config/ -r
+cp ~/.config/openbox/ .config/ -r
+cp ~/.config/ranger/ .config -r
+cp ~/.xrdb/ ./.xrdb -r
+cp ~/.themes/ ./.themes -r
+cp ~/.config/fish/ ./.config -r
 cp ~/.bashrc ./
 cp ~/.vimrc ./
 cp ~/.Xresources ./
