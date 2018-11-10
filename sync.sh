@@ -1,3 +1,5 @@
+ls -a | grep -v sync.sh | grep -v .git | xargs rm -rf
+
 mkdir .config
 cp ~/.config/tint2/ .config/ -r
 cp ~/.config/openbox/ .config/ -r
