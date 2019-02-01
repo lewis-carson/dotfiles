@@ -18,7 +18,7 @@ alias c "xrdb -load ~/.Xresources"
 alias r "ranger"
 alias define "~/.config/fish/scripts/dico"
 alias flip "xcalib -i -a"
-alias .np "s horns"
+alias playing "s horns"
 alias up "cat ~/.local/share/fish/fish_history | grep cmd | cut -c 8- | tail -n 2 | head -n 1 | xargs sudo"
 
 function fish_greeting
