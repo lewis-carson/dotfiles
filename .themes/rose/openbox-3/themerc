@@ -22,7 +22,7 @@ osd.border.color: #071d22
 
 
 # windows
-border.width: 20
+border.width: 10
 *.border.color: white
 # *.active.border.color: white
 # *.inactive.border.color: #f2f2f2

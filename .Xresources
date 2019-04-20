@@ -3,7 +3,7 @@
 *font: xft:curie:size=7
 
 *boldFont:
-*lineSpace:             10
+*lineSpace:             5
 *letterSpace:           1
 *geometry:              50x20
 *internalBorder:        30
