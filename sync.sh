@@ -6,6 +6,7 @@ cp ~/.xrdb/ ./.xrdb -r
 cp ~/.themes/ ./.themes -r
 cp ~/.bashrc ./
 cp ~/.Xresources ./
+cp ~/.fvwm ./
 
 git add .
 git commit . -m "updated dots"
