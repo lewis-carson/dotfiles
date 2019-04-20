@@ -1,0 +1,26 @@
+SetEnv icons $[HOME]/.fvwm/icons
+
+DestroyDecor xo
+AddToDecor xo
++ TitleStyle Centered Height 52 -- Flat
++ ButtonStyle Reset
++ ButtonStyle All -- Flat
++ ButtonStyle All -- UseTitleStyle
++ AddButtonStyle All Vector 2 1x1@4 1x1@4
++ AddButtonStyle 1 \
+ 	ActiveUp (Pixmap $[icons]/x_new.png -- Flat) \
+ 	ActiveDown (Pixmap $[icons]/x_new.png -- Flat) \
+ 	Inactive (Pixmap $[icons]/x_new.png -- Flat)
++ AddButtonStyle 3 \
+ 	ActiveUp (Pixmap $[icons]/o_new.png -- Flat) \
+ 	ActiveDown (Pixmap $[icons]/o_new.png -- Flat) \
+ 	Inactive (Pixmap $[icons]/o_new.png -- Flat)
+
+Mouse 1 1 A Close
+Mouse 1 3 A Maximize
+
+Style "*" UseDecor xo
+Style "*" TitleAtBottom
+Style "*" BorderWidth 0, HandleWidth 0
+
+DesktopSize 1x1
